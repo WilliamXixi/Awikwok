@@ -64,21 +64,59 @@
             margin-top: 10px;
         }
 
-        /* Tombol WhatsApp */
-        .whatsapp-button {
+        .input-container {
+            margin: 20px 0;
+        }
+
+        .input-container input, .input-container label {
+            width: calc(100% - 20px);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2e2e2e;
+            color: #ffffff;
+            display: block;
+            cursor: pointer;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        .upload-label {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .upload-label:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .upload-button {
             display: inline-block;
             background-color: #25D366;
             color: white;
             padding: 12px 20px;
-            margin-top: 20px;
+            margin-top: 10px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1em;
             font-weight: bold;
+            cursor: pointer;
+            border: none;
             transition: background-color 0.3s, transform 0.2s;
         }
 
-        .whatsapp-button:hover {
+        .upload-button:hover {
             background-color: #128C7E;
             transform: scale(1.05);
         }
@@ -101,17 +139,20 @@
         </ul>
         <p class="warning">WARNING!!<br>"LINK CHEAT ENGINE" TIDAK BOLEH DI BAGIKAN KEPADA SIAPAPUN</p>
         <p class="warning">WARNING!!<br>"DIHARAPKAN UNTUK MENGIRIM ID DAN BUKTI TRANSFER KE WA ADMIN</p>
-        
-        <!-- Tombol WhatsApp -->
-        <a href="https://wa.me/17827173775?text=Halo%20TOLONG%20APPROVE%20LOCK%20ID%20SAYA!" target="_blank" class="whatsapp-button">
-            Hubungi via WhatsApp
-        </a>        
 
+        <div class="input-container">
+            <input type="text" id="userID" placeholder="Masukkan ID Anda" required>
+            <label for="fileInput" class="upload-label">Pilih File</label>
+            <input type="file" id="fileInput" accept="image/*" class="hidden-input">
+        </div>
+
+        <button class="upload-button" onclick="sendToWhatsApp()">Kirim Bukti</button>
+        
         <p class="important">JANGAN TUTUP CHEAT ENGINE SLOT SAAT BERMAIN AGAR CHEAT TETAP AKTIF</p>
     </div>
 
     <script>
-        let timeLeft = 1800; // 30 minutes in seconds
+        let timeLeft = 1800;
 
         function updateTimer() {
             const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
@@ -122,6 +163,20 @@
                 timeLeft--;
                 setTimeout(updateTimer, 1000);
             }
+        }
+
+        function sendToWhatsApp() {
+            const userID = document.getElementById('userID').value;
+            const fileInput = document.getElementById('fileInput');
+
+            if (!userID || fileInput.files.length === 0) {
+                alert("Harap masukkan ID dan unggah bukti transfer terlebih dahulu!");
+                return;
+            }
+
+            const message = `Halo Admin,%0A%0ASaya telah melakukan deposit.%0A%0AID: ${userID}`;
+            const whatsappURL = `https://wa.me/17827173775?text=${message}`;
+            window.open(whatsappURL, '_blank');
         }
 
         updateTimer();
