@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel Cheat Slot Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: White#121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Firstplay88 */
+        .firstplay88 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #9b59b6;
+            text-align: center;
+            animation: blink 1.5s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .control-panel {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .control-panel h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #9b59b6;
+        }
+
+        .control-panel form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form-group label {
+            font-size: 1em;
+            margin-right: 10px;
+        }
+
+        .form-group input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+
+        .toggle-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .toggle-group button {
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, color 0.3s;
+        }
+
+        .toggle-group .active {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .toggle-group .inactive {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .toggle-group .inactive {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .toggle-group button:hover {
+            transform: scale(1.1);
+        }
+
+        .submit-button {
+            grid-column: span 2;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #9b59b6;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-button:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+        }
+
+        /* Animasi saat box dimunculkan */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .control-panel {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Tombol Daftar dan Masuk */
+        .auth-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .auth-buttons button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #9b59b6;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #8e44ad;
+        }
+
+        /* Tombol WhatsApp */
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto 0;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <!-- Firstplay88 Title -->
+    <div class="firstplay88">
+        Firstplay88
+    </div>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+        <h1>Control Panel Cheat Slot Engine</h1>
+        <form action="test.html" method="POST">
+            <!-- User ID -->
+            <div class="form-group">
+                <label for="userid">User ID</label>
+                <input type="text" id="userid" name="userid" placeholder="Masukkan User ID" required>
+            </div>
+
+            <!-- Full Sensational -->
+            <div class="toggle-group">
+                <label for="full-sensational">Full Sensational</label>
+                <div>
+                    <button type="button" class="inactive" onclick="toggle(this)">Tidak Aktif</button>
+                    <button type="button" class="inactive" onclick="toggle(this)">Aktif</button>
+                </div>
+            </div>
+
+            <!-- Jackpot > RP 4.000.000 -->
+            <div class="toggle-group">
+                <label for="jackpot-4">Jackpot > RP 4.000.000</label>
+                <div>
+                    <button type="button" class="inactive" onclick="toggle(this)">Tidak Aktif</button>
+                    <button type="button" class="inactive" onclick="toggle(this)">Aktif</button>
+                </div>
+            </div>
+
+            <!-- Jackpot > RP 12.000.000 -->
+            <div class="toggle-group">
+                <label for="jackpot-12">Jackpot > RP 12.000.000</label>
+                <div>
+                    <button type="button" class="inactive" onclick="toggle(this)">Tidak Aktif</button>
+                    <button type="button" class="inactive" onclick="toggle(this)">Aktif</button>
+                </div>
+            </div>
+
+            <!-- Jackpot Maxwin > RP 50.000.000 -->
+            <div class="toggle-group">
+                <label for="maxwin">Jackpot Maxwin > RP 50.000.000</label>
+                <div>
+                    <button type="button" class="inactive" onclick="toggle(this)">Tidak Aktif</button>
+                    <button type="button" class="inactive" onclick="toggle(this)">Aktif</button>
+                </div>
+            </div>
+
+            <!-- Anti Banned -->
+            <div class="toggle-group">
+                <label for="anti-banned">Anti Banned</label>
+                <div>
+                    <button type="button" class="inactive" onclick="toggle(this)">Tidak Aktif</button>
+                    <button type="button" class="inactive" onclick="toggle(this)">Aktif</button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <!-- Auth Buttons -->
+    <div class="auth-buttons">
+        <button onclick="location.href='https://firstplay88cinta.com/invite/ioeh0sr'">Daftar</button>
+        <button onclick="location.href='https://firstplay88cinta.com'">Masuk</button>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/17827173775" class="whatsapp-button" target="_blank">Hubungi via WhatsApp</a>
+
+    <script>
+        function toggle(button) {
+            const buttons = button.parentElement.querySelectorAll("button");
+            buttons.forEach(btn => btn.classList.remove("active"));
+            buttons.forEach(btn => btn.classList.add("inactive"));
+
+            button.classList.add("active");
+            button.classList.remove("inactive");
+        }
+    </script>
+</body>
+</html>
